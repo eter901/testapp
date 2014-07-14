@@ -16,11 +16,12 @@
 	</head>
 	<body>
 	<h1>Hello Dominik</h1>
+	<ul>
+		<li>ahoj</li>
+		<li>cus</li>
+	</ul>
 	<script>
-		$(document).ready(init());
-		$(document).ready(alert("ahoj"));
-
-
+		
 		//INIT FUNCTION
 		function init(){
 			document.addEventListener("deviceready",onDeviceReady, false);
@@ -30,6 +31,8 @@
 			console.log("Phonegap bezi");
 			showNativeMessage("Phonegap bezi",false,"Nadpis","Tahni pryc");
 		}
+
+		$(document).ready(init());
 	</script>
 	</body>
 </html>
