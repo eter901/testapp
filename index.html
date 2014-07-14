@@ -1,9 +1,32 @@
 <doctype html>
 <html>
 	<head>
+		<title>Test app | phonegap</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- CSS Styles //-->
+		<link rel="stylesheet" href=".js/jqmobile/jquery.mobile-1.4.3.css" type="text/css" media="screen" title="no title">
+
+
+		<!-- JavaScript //-->
+		<script type="text/javascript" charset="utf-8" src=".js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src=".js/jqmobile/jquery.mobile-1.4.3.min.js"></script>
 
 	</head>
 	<body>
 	<h1>Hello Dominik</h1>
+	<script>
+		$(document).ready(init());
+
+		//INIT FUNCTION
+		function init(){
+			document.addEventListener("deviceready",onDeviceReady, false);
+		}
+
+		function onDeviceReady(){
+			console.log("Phonegap bezi");
+			showNativeMessage("Phonegap bezi",false,"Nadpis","Tahni pryc");
+		}
+	</script>
 	</body>
 </html>
