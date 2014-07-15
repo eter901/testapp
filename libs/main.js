@@ -8,7 +8,7 @@ function init() {
 //funkce po DEVICE READY
 function onDeviceReady() {
 	//funkce overeni iOS7
-	if (parseFloat(window.device.version) >=== 7.0) {
+	if (parseFloat(window.device.version) >= 7.0) {
           document.body.style.marginTop = "20px";
     }
 	console.log("PhoneGap is running");
