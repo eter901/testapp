@@ -14,24 +14,12 @@
   <!-- * * JAVA SCRIPT * * //-->
   <script type="text/javascript" charset="utf-8" src="js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.3.js"></script>
-  <script type="text/javascript" charset="utf-8" src="libs/cordova-1.7.0.js"></script>
+  <script type="text/javascript" charset="utf-8" src="libs/main.js"></script>
+
   
   <!-- * * OTHER LINKS * * //-->
   
   </head>
   <body>
-  <script>
-  function init(){
-    document.addEventListener("deviceready",onDeviceReady, false);
-  };
-  function onDeviceReady(){
-    showNativeMessage("Phonegap bezi",false,"Nadpis","Text Tlacitka");
-  };
-
-  function showNativeMessage(message,callback,title,buttonText){
-    navigator.notification.alert(message,callback,title,buttonText);
-  };
-  $(document).ready(init());
-  </script>
   </body>
 </html>
