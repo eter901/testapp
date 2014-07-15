@@ -21,5 +21,20 @@
   
   </head>
   <body>
+  <button onclick="showAlert(); return false;">Show message</button>
+  <script>
+      function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+            );
+      }
+      function alertDismissed() {
+        // do something
+    }
+
+  </script>
   </body>
 </html>
