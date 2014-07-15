@@ -20,6 +20,14 @@
   
   </head>
   <body>
-
+  <script>
+  function init(){
+    document.addEventListener("deviceready",onDeviceReady, false);
+  };
+  function onDeviceReady(){
+    showNativeMessage("Phonegap bezi",false,"Nadpis","Text Tlacitka");
+  };
+  $(document).ready(init());
+  </script>
   </body>
 </html>
