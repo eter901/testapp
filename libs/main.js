@@ -1,36 +1,31 @@
 $(document).ready(init());
 
-//In this function we initialize the listener for
-// deviceready event and in its CallBack we call a
-//function named onDeviceReady.
 function init() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 	document.addEventListener("offline", onOffline, false);
-
 }
 
-//If the PhoneGap is loaded, run function onDeviceReady
-//and write message â€ťPhoneGap is runningâ€ťâ€ťto the console
-//and to the user display
+//funkce po DEVICE READY
 function onDeviceReady() {
-
+	//funkce overeni iOS7
+	if (parseFloat(window.device.version) === 7.0) {
+          document.body.style.marginTop = "20px";
+    }
 	console.log("PhoneGap is running");
 	showNativeMessage("PhoneGap is running", false, "Title", "Button Text");
-	//checkSettings();
+	
 }
 
-//This function is launched by EventListener offline in
-//case that a device has no internet connection available
+//funkce na overeni offline modu
 function onOffline() {
-	showNativeMessage("Internet connection is unavailable", init,
+	showNativeMessage("Internet je nedostupný", init,
 			"Connection error", "Try again");
-
 }
 
-//Function for displazing the native MessageBox, parameters
-//are: message, callback, title, buttonText function
+//funkce pro zobrazeni nativni notifikace allert
 function showNativeMessage(message, callback, title, buttonText) {
-	navigator.notification.alert(message, // Zprava
+	navigator.notification.alert(
+	message, // Zprava
 	callback, // callback
 	title, // titulek
 	buttonText // nazev tlacitka
